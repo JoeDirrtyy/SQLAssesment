@@ -157,11 +157,61 @@ Rows matched: 1  Changed: 1  Warnings: 0
 '''
 
 
-remove table
+Average,min, and max IMDBscores
+  
+mysql> SELECT AVG(IMDBScore) from movies;
+''
++----------------+
+| AVG(IMDBScore) |
++----------------+
+|       7.190000 |
++----------------+
+''
+
+mysql> select MIN(IMDBScore)
+    -> from movies
+    -> ;
+    ''
++----------------+
+| MIN(IMDBScore) |
++----------------+
+|           4.60 |
++----------------+
+''
+mysql> SELECT MAX(IMDBScore) from movies;
+'''
++----------------+
+| MAX(IMDBScore) |
++----------------+
+|           9.00 |
++----------------+
+'''
+
+
+using  A HAVING COUNT
+
+mysql> SELECT *
+    -> FROM movies
+    -> HAVING COUNT(*)>1;
+    '''
++------+-----------------+---------+--------+-----------+--------+
+| ID   | Title           | Runtime | Genre  | IMDBScore | Rating |
++------+-----------------+---------+--------+-----------+--------+
+|    1 | Howard the duck |     110 | Sci-Fi |      4.60 | PG     |
++------+-----------------+---------+--------+-----------+--------+
+1 row in set (0.00 sec)
+'''
+
+Delete all rated R movies
+DELETE FROM movies WHERE Rating = 'R';
+
+
+
+Remove the table
 
 Drop Movies;
  
- Remove database
+ Remove the  database
  Drop SQLAssessment (Database name)
 
 
