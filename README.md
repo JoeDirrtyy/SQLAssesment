@@ -14,14 +14,13 @@ Query OK, 0 rows affected (0.05 sec)
 mysql> insert into movies(Title, Runtime, Genre, IMDBScore, rating)
     -> VALUES('Howard the duck','110','Sci-Fi','4.6','PG');
 Query OK, 1 row affected (0.03 sec)
-\\\
+'''
 +-----------------+---------+--------+-----------+--------+
 | Title           | Runtime | Genre  | IMDBScore | Rating |
 +-----------------+---------+--------+-----------+--------+
 | Howard the duck |     110 | Sci-Fi |      4.60 | PG     |
 +-----------------+---------+--------+-----------+--------+
-
-\\\
+'''
 
 mysql> insert in movies(Title, Runtime, Genre, IMBDScore, rating)
     -> VALUES('Howard the duck','Sci-Fi','4.6','PG');
@@ -46,11 +45,13 @@ Query OK, 1 row affected (0.03 sec)
 
 mysql> select * from movies
     -> ;
+    '''
 +-----------------+---------+--------+-----------+--------+
 | Title           | Runtime | Genre  | IMDBScore | Rating |
 +-----------------+---------+--------+-----------+--------+
 | Howard the duck |     110 | Sci-Fi |      4.60 | PG     |
 +-----------------+---------+--------+-----------+--------+
+'''
 1 row in set (0.00 sec)
 
 mysql> insert into movies(Title, Runtime, Genre, IMDBScore, rating)
@@ -75,7 +76,7 @@ Query OK, 1 row affected (0.01 sec)
 
 mysql> select * from movies;
 
-\\\
+'''
 +-------------------+---------+-------------+-----------+--------+
 | Title             | Runtime | Genre       | IMDBScore | Rating |
 +-------------------+---------+-------------+-----------+--------+
@@ -86,7 +87,7 @@ mysql> select * from movies;
 | Starship Troopers |     129 | Sci-Fi      |      7.20 | PG-13  |
 | Waltz With Bashir |      90 | Documentary |      8.00 | R      |
 +-------------------+---------+-------------+-----------+--------+
-\\\
+'''
 6 rows in set (0.00 sec)
 
 Add your own movies
@@ -98,7 +99,7 @@ Query OK, 1 row affected (0.01 sec)
 mysql> insert into movies(Title, Runtime, Genre, IMDBScore, rating)
     -> VALUES('Thor Love & Thunder', '119','Action','9.0','PG-13');
 Query OK, 1 row affected (0.00 sec)
-\\\
+'''
 +---------------------+---------+-------------+-----------+--------+
 | Title               | Runtime | Genre       | IMDBScore | Rating |
 +---------------------+---------+-------------+-----------+--------+
@@ -111,40 +112,40 @@ Query OK, 1 row affected (0.00 sec)
 | Thor Love & Thunder |     119 | Action      |      9.00 | PG-13  |
 | Waltz With Bashir   |      90 | Documentary |      8.00 | R      |
 +---------------------+---------+-------------+-----------+--------+
-\\\
+'''
 
 find all Sci-Fi Genre
 mysql> select * from movies WHERE IMDBscore < 6.6;
-\\\
+'''
 +-----------------+---------+--------+-----------+--------+
 | Title           | Runtime | Genre  | IMDBScore | Rating |
 +-----------------+---------+--------+-----------+--------+
 | Howard the duck |     110 | Sci-Fi |      4.60 | PG     |
 | Lavalantula     |      83 | Horror |      4.70 | TV-14  |
 +-----------------+---------+--------+-----------+--------+
-\\\
+'''
 
 
 PG and less than 100 minutes
 mysql> Select * from movies WHERE Rating = 'PG';
-\\\
+'''
 +-----------------+---------+--------+-----------+--------+
 | Title           | Runtime | Genre  | IMDBScore | Rating |
 +-----------------+---------+--------+-----------+--------+
 | Howard the duck |     110 | Sci-Fi |      4.60 | PG     |
 | Spaceballs      |      96 | Comedy |      7.10 | PG     |
 +-----------------+---------+--------+-----------+--------+
-\\\
+'''
 
 Below a 7.5  grouped by genre
 mysql> Select * from movies WHERE Rating = 'PG' AND Runtime <100;
-\\\
+'''
 +------------+---------+--------+-----------+--------+
 | Title      | Runtime | Genre  | IMDBScore | Rating |
 +------------+---------+--------+-----------+--------+
 | Spaceballs |      96 | Comedy |      7.10 | PG     |
 +------------+---------+--------+-----------+--------+
-\\\
+'''
 
 Change Starship troopers to rated R
 mysql> UPDATE movies
@@ -152,7 +153,8 @@ mysql> UPDATE movies
     -> WHERE ID =3;
 Query OK, 1 row affected (0.01 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
-\\\
+
+ '''
 +----+---------------------+---------+-------------+-----------+--------+
 | ID | Title               | Runtime | Genre       | IMDBScore | Rating |
 +----+---------------------+---------+-------------+-----------+--------+
@@ -167,7 +169,7 @@ Rows matched: 1  Changed: 1  Warnings: 0
 |  9 | Tenacious D         |     120 | Comedy      |      7.10 | R      |
 | 10 | Thor Love & Thunder |     119 | Action      |      9.00 | PG-13  |
 +----+---------------------+---------+-------------+-----------+--------+
-\\\
+'''
 
 
 remove table
