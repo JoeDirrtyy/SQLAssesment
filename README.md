@@ -24,21 +24,6 @@ Query OK, 1 row affected (0.03 sec)
 
 mysql> insert in movies(Title, Runtime, Genre, IMBDScore, rating)
     -> VALUES('Howard the duck','Sci-Fi','4.6','PG');
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in movies(Title, Runtime, Genre, IMBDScore, rating)
-VALUES('Howard the duck','Sc' at line 1
-mysql> insert into movies(Title, Runtime, Genre, IMBDScore, rating)
-    -> VALUES('Howard the duck','Sci-Fi','4.6','PG');
-ERROR 1054 (42S22): Unknown column 'IMBDScore' in 'field list'
-mysql> insert in movies(Title, Runtime, Genre, IMDBScore, rating)
-    -> VALUES('Howard the duck','Sci-Fi','4.6','PG');
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in movies(Title, Runtime, Genre, IMDBScore, rating)
-VALUES('Howard the duck','Sc' at line 1
-mysql> insert into movies(Title, Runtime, Genre, IMBDScore, rating)
-    -> VALUES('Howard the duck','Sci-Fi','4.6','PG');
-ERROR 1054 (42S22): Unknown column 'IMBDScore' in 'field list'
-mysql> insert into movies(Title, Runtime, Genre, IMDBScore, rating)
-    -> VALUES('Howard the duck','Sci-Fi','4.6','PG');
-ERROR 1136 (21S01): Column count doesn't match value count at row 1
 mysql> insert into movies(Title, Runtime, Genre, IMDBScore, rating)
     -> VALUES('Howard the duck','110','Sci-Fi','4.6','PG');
 Query OK, 1 row affected (0.03 sec)
